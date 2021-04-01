@@ -1,0 +1,25 @@
+{
+    "name": "talkgrammar",
+    "displayName": "TalkGrammar",
+    "description": "Grammar for .talk files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "talk",
+            "aliases": ["Talk", "talk"],
+            "extensions": [".talk"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "talk",
+            "scopeName": "source.talk",
+            "path": "./syntaxes/talk.tmLanguage.json"
+        }]
+    }
+}
