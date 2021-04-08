@@ -1,5 +1,7 @@
 # talkgrammar README
 
+Marketplace: https://marketplace.visualstudio.com/items?itemName=magneet.talkgrammar
+
 Work in progress!
 
 ## Features
