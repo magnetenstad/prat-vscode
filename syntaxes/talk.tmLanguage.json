@@ -3,27 +3,54 @@
 	"name": "Talk",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#attributes"
 		},
 		{
-			"include": "#strings"
+			"include": "#comments"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#line"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.talk",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.talk",
-			"begin": "\"",
-			"end": "\"",
+		"attributes": {
+			"name": "keyword.control",
+			"begin": "(@|\\>|\\?|\\*){",
+			"end": "}",
 			"patterns": [
 				{
-					"name": "constant.character.escape.talk",
 					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment",
+			"begin": "#{",
+			"end": "}",
+			"patterns": [
+				{
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"name": "constant",
+			"patterns": [
+				{
+					"name": "constant",
+					"match": "\\$\\w+"
+				}
+			]
+		},
+		"line": {
+			"name": "constant",
+			"patterns": [
+				{
+					"name": "string",
+					"match": "\\t-"
 				}
 			]
 		}
