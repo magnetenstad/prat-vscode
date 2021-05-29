@@ -12,13 +12,39 @@
 			"include": "#variables"
 		},
 		{
-			"include": "#line"
+			"include": "#code"
+		},
+		{
+			"include": "#author"
+		},
+		{
+			"include": "#slash"
 		}
 	],
 	"repository": {
 		"attributes": {
-			"name": "keyword.control",
-			"begin": "(@|\\>|\\?|\\*){",
+			"name": "entity.name.tag",
+			"begin": "(\\>|\\#){",
+			"end": "}",
+			"patterns": [
+				{
+					"match": "\\\\."
+				}
+			]
+		},
+		"author": {
+			"name": "entity.name.class",
+			"begin": "@{",
+			"end": "}",
+			"patterns": [
+				{
+					"match": "\\\\."
+				}
+			]
+		},
+		"code": {
+			"name": "entity.name.function",
+			"begin": "(\\?|\\!){",
 			"end": "}",
 			"patterns": [
 				{
@@ -28,7 +54,7 @@
 		},
 		"comments": {
 			"name": "comment",
-			"begin": "#{",
+			"begin": "%{",
 			"end": "}",
 			"patterns": [
 				{
@@ -37,20 +63,18 @@
 			]
 		},
 		"variables": {
-			"name": "constant",
 			"patterns": [
 				{
-					"name": "constant",
-					"match": "\\$\\w+"
+					"name": "storage.type.var",
+					"match": "\\$\\w+\\$"
 				}
 			]
 		},
-		"line": {
-			"name": "constant",
+		"slash": {
 			"patterns": [
 				{
-					"name": "string",
-					"match": "\\t-"
+					"name": "constant.character",
+					"match": "\\\\"
 				}
 			]
 		}
