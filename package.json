@@ -1,27 +1,37 @@
 {
-    "publisher": "magneet",
-    "repository": "https://github.com/magnetenstad/talkgrammar",
-    "name": "talkgrammar",
-    "displayName": "TalkGrammar",
-    "description": "Grammar for .talk files",
-    "version": "0.0.4",
-    "engines": {
-        "vscode": "^1.52.1"
-    },
-    "categories": [
-        "Programming Languages"
+  "publisher": "magneet",
+  "repository": "https://github.com/magnetenstad/talkgrammar",
+  "name": "talkgrammar",
+  "displayName": "TalkGrammar",
+  "description": "Syntax highlighting for .talk files",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.52.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "talk",
+        "aliases": [
+          "Talk",
+          "talk",
+          "pratjs"
+        ],
+        "extensions": [
+          ".talk"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "talk",
-            "aliases": ["Talk", "talk"],
-            "extensions": [".talk"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "talk",
-            "scopeName": "source.talk",
-            "path": "./syntaxes/talk.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "talk",
+        "scopeName": "source.talk",
+        "path": "./syntaxes/talk.tmLanguage.json"
+      }
+    ]
+  }
 }

@@ -1,12 +1,12 @@
 # talkgrammar README
 
-Marketplace: https://marketplace.visualstudio.com/items?itemName=magneet.talkgrammar
+Syntax highlighter of [.talk](https://github.com/magnetenstad/talk) files.
 
-Work in progress!
+Install from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=magneet.talkgrammar)
 
 ## Features
 
-Syntax highlighter of .talk files.
+- Syntax highlighting
 
 ## Requirements
 
@@ -18,10 +18,4 @@ No settings.
 
 ## Known Issues
 
-Currently no functionality.
-
-## Release Notes
-
-### 1.0.0
-
-Initial release. 
+No know issues.

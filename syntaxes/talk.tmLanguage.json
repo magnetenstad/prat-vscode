@@ -1,83 +1,98 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Talk",
-	"patterns": [
-		{
-			"include": "#attributes"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#code"
-		},
-		{
-			"include": "#author"
-		},
-		{
-			"include": "#slash"
-		}
-	],
-	"repository": {
-		"attributes": {
-			"name": "entity.name.tag",
-			"begin": "(\\>|\\#){",
-			"end": "}",
-			"patterns": [
-				{
-					"match": "\\\\."
-				}
-			]
-		},
-		"author": {
-			"name": "entity.name.class",
-			"begin": "@{",
-			"end": "}",
-			"patterns": [
-				{
-					"match": "\\\\."
-				}
-			]
-		},
-		"code": {
-			"name": "entity.name.function",
-			"begin": "(\\?|\\!){",
-			"end": "}",
-			"patterns": [
-				{
-					"match": "\\\\."
-				}
-			]
-		},
-		"comments": {
-			"name": "comment",
-			"begin": "%{",
-			"end": "}",
-			"patterns": [
-				{
-					"match": "\\\\."
-				}
-			]
-		},
-		"variables": {
-			"patterns": [
-				{
-					"name": "storage.type.var",
-					"match": "\\$\\w+\\$"
-				}
-			]
-		},
-		"slash": {
-			"patterns": [
-				{
-					"name": "constant.character",
-					"match": "\\\\"
-				}
-			]
-		}
-	},
-	"scopeName": "source.talk"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Talk",
+  "patterns": [
+    {
+      "include": "#attribute"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#condition"
+    },
+    {
+      "include": "#action"
+    },
+    {
+      "include": "#init-action"
+    },
+    {
+      "include": "#author"
+    },
+    {
+      "include": "#inheritance"
+    },
+    {
+      "include": "#slash"
+    },
+    {
+      "include": "#heading"
+    },
+    {
+      "include": "#choice"
+    }
+  ],
+  "repository": {
+    "attribute": {
+      "name": "entity.name.tag",
+      "begin": "[\\>\\#]{",
+      "end": "}"
+    },
+    "author": {
+      "name": "entity.name.class",
+      "begin": "@{",
+      "end": "}"
+    },
+    "condition": {
+      "name": "entity.name.function",
+      "begin": "\\?{",
+      "end": "}"
+    },
+    "action": {
+      "name": "entity.name.function",
+      "begin": "\\!{",
+      "end": "}"
+    },
+    "init-action": {
+      "name": "entity.name.function",
+      "begin": "\\!\\!{",
+      "end": "}"
+    },
+    "comment": {
+      "name": "comment",
+      "begin": "%{",
+      "end": "}"
+    },
+    "variable": {
+      "name": "variable",
+      "begin": "\\${",
+      "end": "}"
+    },
+    "inheritance": {
+      "name": "entity.name.tag",
+      "begin": "\\+{",
+      "end": "}"
+    },
+    "slash": {
+      "patterns": [
+        {
+          "name": "constant.character",
+          "match": "\\\\"
+        }
+      ]
+    },
+    "heading": {
+      "name": "markup",
+      "match": "^(\\t\\t)*[^\t\n(\\#{)(\\@{)(\\>{)(\\?{)(\\!{)(\\!!{)(\\%{)(\\+{)\\n]+"
+    },
+    "choice": {
+      "name": "markup.italic",
+      "match": "^\\t(\\t\\t)*[^\t\n(\\#{)(\\@{)(\\>{)(\\?{)(\\!{)(\\!!{)(\\%{)(\\+{)\\n]+"
+    }
+  },
+  "scopeName": "source.talk"
 }
