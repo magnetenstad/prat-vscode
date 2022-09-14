@@ -1,10 +1,10 @@
 {
   "publisher": "magneet",
-  "repository": "https://github.com/magnetenstad/talkgrammar",
-  "name": "talkgrammar",
-  "displayName": "TalkGrammar",
-  "description": "Syntax highlighting for .talk files",
-  "version": "0.1.0",
+  "repository": "https://github.com/magnetenstad/prat-vscode",
+  "name": "prat",
+  "displayName": "Prat",
+  "description": "Syntax highlighting for .prat files",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.52.1"
   },
@@ -14,23 +14,25 @@
   "contributes": {
     "languages": [
       {
-        "id": "talk",
+        "id": "prat",
         "aliases": [
-          "Talk",
-          "talk",
-          "pratjs"
+          "prat",
+          "pratjs",
+          "prat.js",
+          "pratpy",
+          "prat.py"
         ],
         "extensions": [
-          ".talk"
+          ".prat"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "talk",
-        "scopeName": "source.talk",
-        "path": "./syntaxes/talk.tmLanguage.json"
+        "language": "prat",
+        "scopeName": "source.prat",
+        "path": "./syntaxes/prat.tmLanguage.json"
       }
     ]
   }

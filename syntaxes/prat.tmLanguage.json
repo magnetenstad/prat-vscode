@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Talk",
+  "name": "Prat",
   "patterns": [
     {
       "include": "#attribute"
@@ -94,5 +94,5 @@
       "match": "^\\t(\\t\\t)*[^\t\n(\\#{)(\\@{)(\\>{)(\\?{)(\\!{)(\\!!{)(\\%{)(\\+{)\\n]+"
     }
   },
-  "scopeName": "source.talk"
+  "scopeName": "source.prat"
 }

@@ -1,8 +1,8 @@
-# talkgrammar README
+# Prat README
 
-Syntax highlighter of [.talk](https://github.com/magnetenstad/talk) files.
+Syntax highlighter of [.prat](https://github.com/magnetenstad/prat.js) files.
 
-Install from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=magneet.talkgrammar)
+Install from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=magneet.prat).
 
 ## Features
 
